@@ -40,9 +40,7 @@ SRCS = ./ft_atoi.c \
 	./ft_putstr.c \
 	./ft_putnbr.c \
 	./ft_lstrev.c \
-
-
-BONUS = ./ft_lstnew.c \
+	./ft_lstnew.c \
 	./ft_lstadd_front.c \
 	./ft_lstsize.c \
 	./ft_lstlast.c \
@@ -54,21 +52,18 @@ BONUS = ./ft_lstnew.c \
 
 INCLUDES = ./
 OBJS_SRCS = ${SRCS:.c=.o}
-OBJS_BONUS = ${BONUS:.c=.o}
 
 all : $(EXEC)
 
 .o : .c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
-bonus : $(OBJS_BONUS) $(OBJS_SRCS)
-		ar rcs $(EXEC) $(OBJS_SRCS) $(OBJS_BONUS) 
 
 $(EXEC) : $(OBJS_SRCS)
 		ar rcs $(EXEC) $(OBJS_SRCS)
 
 clean :
-	rm -f $(OBJS_SRCS) $(OBJS_BONUS)
+	rm -f $(OBJS_SRCS)
 
 fclean : clean
 	rm -f $(EXEC)
