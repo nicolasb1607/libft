@@ -48,7 +48,8 @@ SRCS = ./ft_atoi.c \
 	./ft_lstdelone.c \
 	./ft_lstclear.c \
 	./ft_lstiter.c \
-	./ft_lstmap.c
+	./ft_lstmap.c \
+	./ft_is_int.c \
 
 INCLUDES = ./
 OBJS_SRCS = ${SRCS:.c=.o}
