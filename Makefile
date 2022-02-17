@@ -56,7 +56,7 @@ OBJS_SRCS = ${SRCS:.c=.o}
 
 all : $(EXEC)
 
-.o : .c
+.c.o:
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 
