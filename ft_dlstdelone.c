@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_dlstdelone.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 17:29:40 by nburat-d          #+#    #+#             */
-/*   Updated: 2022/02/23 14:15:07 by nburat-d         ###   ########.fr       */
+/*   Created: 2022/02/23 16:16:40 by nburat-d          #+#    #+#             */
+/*   Updated: 2022/02/23 16:17:45 by nburat-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Ajoute l’élément new à la fin de la liste.
-
-#1. L’adresse du pointeur vers le premier élément
-de la liste.
-#2. L’adresse du pointeur vers l’élément à rajouter
-à la liste.*/
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_dlstdelone(t_dlist *lst, void (*del)(void*))
 {
-	t_list	*last;
+	t_dlist	*tmp;
 
-	if (!*alst)
+	tmp = lst;
+	if (lst != NULL && del != NULL)
 	{
-		*alst = new;
-		return ;
-	}
-	if (*alst != NULL && new != NULL)
-	{
-		last = ft_lstlast(*alst);
-		last->next = new;
+		lst->next->prev = tmp->prev;
+		lst->prev->next = tmp->next;
+		(*del)(lst->content);
+		free(lst);
 	}
 }

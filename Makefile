@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/02/23 16:20:24 by nburat-d          #+#    #+#              #
+#    Updated: 2022/02/25 11:40:33 by nburat-d         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 EXEC = libft.a
@@ -9,6 +21,7 @@ SRCS = ./ft_atoi.c \
 	./ft_isascii.c \
 	./ft_isdigit.c \
 	./ft_isprint.c \
+	./ft_containchar.c \
 	./ft_memchr.c \
 	./ft_memcmp.c \
 	./ft_memcpy.c \
@@ -19,6 +32,7 @@ SRCS = ./ft_atoi.c \
 	./ft_strlcat.c \
 	./ft_strlcpy.c \
 	./ft_strlen.c \
+	./ft_tablen.c \
 	./ft_strcmp.c \
 	./ft_strncmp.c \
 	./ft_strnstr.c \
@@ -50,18 +64,25 @@ SRCS = ./ft_atoi.c \
 	./ft_lstiter.c \
 	./ft_lstmap.c \
 	./ft_is_int.c \
+	./ft_dlstadd_back.c \
+	./ft_dlstadd_front.c \
+	./ft_dlstclear.c \
+	./ft_dlstlast.c \
+	./ft_dlstnew.c \
+	./ft_dlstsize.c \
+	./ft_dlstdelone.c \
+	./ft_dlstiter.c \
 
 INCLUDES = ./
 OBJS_SRCS = ${SRCS:.c=.o}
 
 all : $(EXEC)
 
-.c.o:
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
-
-
 $(EXEC) : $(OBJS_SRCS)
 		ar rcs $(EXEC) $(OBJS_SRCS)
+
+.c.o :
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 clean :
 	rm -f $(OBJS_SRCS)
