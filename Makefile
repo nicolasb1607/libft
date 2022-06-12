@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 16:20:24 by nburat-d          #+#    #+#              #
-#    Updated: 2022/02/25 16:50:23 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/06/12 23:09:51 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,22 +75,28 @@ SRCS = ./ft_atoi.c \
 	./ft_dlstiter.c \
 
 INCLUDES = ./
-OBJS_SRCS = ${SRCS:.c=.o}
+
+OBJS = ${SRCS:.c=.o}
+DEPENDS = ${SRCS:.c=.d}
 
 all : $(EXEC)
 
-$(EXEC) : $(OBJS_SRCS)
-		ar rcs $(EXEC) $(OBJS_SRCS)
+$(EXEC) : $(OBJS)
+		ar rcs $(EXEC) $(OBJS)
 
-.c.o :
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
+%.o : %.c
+	$(CC) $(CFLAGS) -MD -o $@ -c $<  -I $(INCLUDES)
 
 clean :
-	rm -f $(OBJS_SRCS)
+	rm -f $(OBJS)
+	rm -f $(DEPENDS)
 
 fclean : clean
 	rm -f $(EXEC)
+	
 
 re : fclean all
 
 .PHONY : clean fclean re
+
+-include $(DEPENDS)
