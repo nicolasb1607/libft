@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 16:20:24 by nburat-d          #+#    #+#              #
-#    Updated: 2022/06/13 10:29:56 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/06/13 10:36:17 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,14 +95,25 @@ OBJS = $(addprefix $(OBJ_PATH), ${SRCS:.c=.o})
 DEPENDS = $(addprefix $(OBJ_PATH), ${SRCS:.c=.d})
 
 ################################################################################
+#                                   COLORS                                     #
+################################################################################
+
+BLUE		=	\033[0;34m
+RED			=	\033[0;31m
+GREEN		=	\033[0;32m
+NO_COLOR	=	\033[m
+
+################################################################################
 #                                   PRINT_MSG                                  #
 ################################################################################
 
-compilation : 
+compilation :
 	@echo "Compilation in progress..."
 	
-complete : 
+complete :
+	@echo "$(GREEN)"
 	@echo "Compilation complete !"
+	@echo "$(NO_COLOR)"
 	
 linking : 
 	@echo "Linking in progress..."
