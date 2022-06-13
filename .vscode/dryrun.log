@@ -1,5 +1,5 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory '/home/nicolas/Documents/github/libft'
+make: Entering directory '/mnt/nfs/homes/nburat-d/Documents/libft'
 make: Nothing to be done for 'all'.
-make: Leaving directory '/home/nicolas/Documents/github/libft'
+make: Leaving directory '/mnt/nfs/homes/nburat-d/Documents/libft'
  
