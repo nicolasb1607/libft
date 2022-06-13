@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 16:20:24 by nburat-d          #+#    #+#              #
-#    Updated: 2022/06/13 10:07:19 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/06/13 10:29:56 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,27 +94,46 @@ OBJ_PATH = ./objs/
 OBJS = $(addprefix $(OBJ_PATH), ${SRCS:.c=.o})
 DEPENDS = $(addprefix $(OBJ_PATH), ${SRCS:.c=.d})
 
+################################################################################
+#                                   PRINT_MSG                                  #
+################################################################################
+
+compilation : 
+	@echo "Compilation in progress..."
+	
+complete : 
+	@echo "Compilation complete !"
+	
+linking : 
+	@echo "Linking in progress..."
+	
+clean_files : 
+	@echo "Cleaning files..."
+	
+clean_exec : 
+	@echo "Cleaning executable..."
 
 ################################################################################
 #                                   RULES                                      #
 ################################################################################
 
-all : $(EXEC)
+all : compilation $(EXEC) complete
 
-$(EXEC) : $(OBJS)
-		ar rcs $(EXEC) $(OBJS)
+$(EXEC) : linking $(OBJS)
+	@ar rcs $(EXEC) $(OBJS)
 
 $(OBJ_PATH)%.o : $(SRC_PATH)%.c
-	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c -o $@ $<  -I $(INCLUDES_PATH)
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c -o $@ $<  -I $(INCLUDES_PATH)
 
-clean :
-	rm -f $(OBJS)
-	rm -f $(OBJ_PATH)$(DEPENDS)
-	rm -rf $(OBJ_PATH)
+clean : clean_files
+	@rm -f $(OBJS)
+	@rm -f $(OBJ_PATH)$(DEPENDS)
+	@rm -rf $(OBJ_PATH)
 
-fclean : clean
-	rm -f $(EXEC)
+fclean : clean clean_exec
+	$(clean_exec)
+	@rm -f $(EXEC)
 	
 
 re : fclean all
