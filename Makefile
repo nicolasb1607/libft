@@ -6,7 +6,7 @@
 #    By: nburat-d <nburat-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 16:20:24 by nburat-d          #+#    #+#              #
-#    Updated: 2022/06/13 10:36:17 by nburat-d         ###   ########.fr        #
+#    Updated: 2022/06/13 10:42:03 by nburat-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,6 +103,40 @@ RED			=	\033[0;31m
 GREEN		=	\033[0;32m
 NO_COLOR	=	\033[m
 
+
+################################################################################
+#                                   RULES                                      #
+################################################################################
+
+all : compilation $(EXEC) completed
+
+$(EXEC) : linking $(OBJS)
+	@ar rcs $(EXEC) $(OBJS)
+	@echo "done."
+
+
+$(OBJ_PATH)%.o : $(SRC_PATH)%.c
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c -o $@ $<  -I $(INCLUDES_PATH)
+
+clean : clean_files
+	@rm -f $(OBJS)
+	@rm -f $(OBJ_PATH)$(DEPENDS)
+	@rm -rf $(OBJ_PATH)
+	@echo "done."
+
+fclean : clean clean_exec
+	$(clean_exec)
+	@rm -f $(EXEC)
+	@echo "done."
+
+
+re : fclean all
+
+.PHONY : clean fclean re
+
+-include $(DEPENDS)
+
 ################################################################################
 #                                   PRINT_MSG                                  #
 ################################################################################
@@ -110,7 +144,7 @@ NO_COLOR	=	\033[m
 compilation :
 	@echo "Compilation in progress..."
 	
-complete :
+completed :
 	@echo "$(GREEN)"
 	@echo "Compilation complete !"
 	@echo "$(NO_COLOR)"
@@ -124,31 +158,3 @@ clean_files :
 clean_exec : 
 	@echo "Cleaning executable..."
 
-################################################################################
-#                                   RULES                                      #
-################################################################################
-
-all : compilation $(EXEC) complete
-
-$(EXEC) : linking $(OBJS)
-	@ar rcs $(EXEC) $(OBJS)
-
-$(OBJ_PATH)%.o : $(SRC_PATH)%.c
-	@mkdir -p $(dir $@)
-	@$(CC) $(CFLAGS) -c -o $@ $<  -I $(INCLUDES_PATH)
-
-clean : clean_files
-	@rm -f $(OBJS)
-	@rm -f $(OBJ_PATH)$(DEPENDS)
-	@rm -rf $(OBJ_PATH)
-
-fclean : clean clean_exec
-	$(clean_exec)
-	@rm -f $(EXEC)
-	
-
-re : fclean all
-
-.PHONY : clean fclean re
-
--include $(DEPENDS)
