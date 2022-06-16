@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Thu Jun 16 16:36:42 2022
+# Make data base, printed on Thu Jun 16 17:47:15 2022
 
 # Variables
 
@@ -74,7 +73,7 @@ OBJS = $(addprefix $(OBJ_PATH), ${SRCS:.c=.o})
 # environment
 MANAGERPID = 1294194
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/40568/vscode-ipc-6d2f7f21-95f1-4c6a-918c-cd85f1086d10.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/40568/vscode-ipc-c0c583a1-c458-40e1-af4d-f42101c99e1f.sock
 # environment
 VSCODE_CWD = /mnt/nfs/homes/nburat-d/Documents/libft
 # environment
@@ -274,19 +273,19 @@ NO_COLOR = \033[m
 
 # Directories
 
-# . (device 58, inode 49451058): 11 files, no impossibilities.
+# . (device 58, inode 49451058): 12 files, no impossibilities.
 # srcs (device 58, inode 49481600): No files, no impossibilities so far.
 
-# 11 files, no impossibilities in 2 directories.
+# 12 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
- 
 objs/%.o: srcs/%.c
 #  recipe to execute (from 'Makefile', line 123):
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c -o $@ $<  -I $(INCLUDES_PATH)
 
+ 
 # 1 implicit rules, 0 (0.0%) terminal.
 
 # Files
@@ -522,12 +521,12 @@ srcs/ft_strchr.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 # Not a target:
 objs/ft_is_int.d:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-13 10:43:15.721020888
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -745,7 +744,6 @@ srcs/ft_atoi.c:
 
 objs/ft_lstlast.o: srcs/ft_lstlast.c /usr/include/stdc-predef.h libft.h /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/libc-header-start.h /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h /usr/include/x86_64-linux-gnu/bits/wordsize.h /usr/include/x86_64-linux-gnu/bits/long-double.h /usr/include/x86_64-linux-gnu/gnu/stubs.h /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/x86_64-linux-gnu/bits/waitflags.h /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/x86_64-linux-gnu/bits/floatn.h /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/x86_64-linux-gnu/bits/types.h /usr/include/x86_64-linux-gnu/bits/timesize.h /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/x86_64-linux-gnu/bits/time64.h /usr/include/x86_64-linux-gnu/bits/types/clock_t.h /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h /usr/include/x86_64-linux-gnu/bits/types/time_t.h /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h /usr/include/x86_64-linux-gnu/bits/endianness.h /usr/include/x86_64-linux-gnu/bits/byteswap.h /usr/include/x86_64-linux-gnu/bits/uintn-identity.h /usr/include/x86_64-linux-gnu/sys/select.h /usr/include/x86_64-linux-gnu/bits/select.h /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h /usr/include/x86_64-linux-gnu/bits/struct_mutex.h /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h /usr/include/x86_64-linux-gnu/bits/environments.h /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/x86_64-linux-gnu/bits/getopt_posix.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -754,6 +752,7 @@ objs/ft_lstnew.d:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-13 10:43:15.413021009
 #  File has been updated.
+ 
 #  Successfully updated.
 
 libft.a: linking objs/ft_atoi.o objs/ft_bzero.o objs/ft_calloc.o objs/ft_isalnum.o objs/ft_isalpha.o objs/ft_isascii.o objs/ft_isdigit.o objs/ft_isprint.o objs/ft_containchar.o objs/ft_memchr.o objs/ft_memcmp.o objs/ft_memcpy.o objs/ft_memset.o objs/ft_memmove.o objs/ft_strchr.o objs/ft_strdup.o objs/ft_strlcat.o objs/ft_strlcpy.o objs/ft_strncpy.o objs/ft_strlen.o objs/ft_tablen.o objs/ft_strcmp.o objs/ft_strncmp.o objs/ft_strnstr.o objs/ft_strrchr.o objs/ft_tolower.o objs/ft_toupper.o objs/ft_substr.o objs/ft_strjoin.o objs/ft_strtrim.o objs/ft_split.o objs/ft_itoa.o objs/ft_striteri.o objs/ft_strmapi.o objs/ft_putchar_fd.o objs/ft_putstr_fd.o objs/ft_putendl_fd.o objs/ft_putnbr_fd.o objs/ft_putchar.o objs/ft_putstr.o objs/ft_putnbr.o objs/ft_lstrev.o objs/ft_lstnew.o objs/ft_lstadd_front.o objs/ft_lstsize.o objs/ft_lstlast.o objs/ft_lstadd_back.o objs/ft_lstdelone.o objs/ft_lstclear.o objs/ft_lstiter.o objs/ft_lstmap.o objs/ft_is_int.o objs/ft_dlstadd_back.o objs/ft_dlstadd_front.o objs/ft_dlstclear.o objs/ft_dlstlast.o objs/ft_dlstnew.o objs/ft_dlstsize.o objs/ft_dlstdelone.o objs/ft_dlstiter.o
@@ -966,7 +965,6 @@ srcs/ft_itoa.c:
 # Not a target:
 objs/ft_isalpha.d:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-06-13 10:43:14.113021519
 #  File has been updated.
 #  Successfully updated.
@@ -984,6 +982,7 @@ srcs/ft_strlen.c:
 #  File has not been updated.
 
 # Not a target:
+ 
 objs/ft_lstsize.d:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-13 10:43:15.481020982
@@ -1220,7 +1219,6 @@ objs/ft_lstnew.o: srcs/ft_lstnew.c /usr/include/stdc-predef.h libft.h /usr/lib/g
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 objs/ft_containchar.o: srcs/ft_containchar.c /usr/include/stdc-predef.h libft.h /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/libc-header-start.h /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h /usr/include/x86_64-linux-gnu/bits/wordsize.h /usr/include/x86_64-linux-gnu/bits/long-double.h /usr/include/x86_64-linux-gnu/gnu/stubs.h /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/x86_64-linux-gnu/bits/waitflags.h /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/x86_64-linux-gnu/bits/floatn.h /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/x86_64-linux-gnu/bits/types.h /usr/include/x86_64-linux-gnu/bits/timesize.h /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/x86_64-linux-gnu/bits/time64.h /usr/include/x86_64-linux-gnu/bits/types/clock_t.h /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h /usr/include/x86_64-linux-gnu/bits/types/time_t.h /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h /usr/include/x86_64-linux-gnu/bits/endianness.h /usr/include/x86_64-linux-gnu/bits/byteswap.h /usr/include/x86_64-linux-gnu/bits/uintn-identity.h /usr/include/x86_64-linux-gnu/sys/select.h /usr/include/x86_64-linux-gnu/bits/select.h /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h /usr/include/x86_64-linux-gnu/bits/struct_mutex.h /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h /usr/include/x86_64-linux-gnu/bits/environments.h /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/x86_64-linux-gnu/bits/getopt_posix.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -1235,6 +1233,7 @@ srcs/ft_memmove.c:
 # Not a target:
 objs/ft_lstadd_front.d:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-13 10:43:15.445020996
 #  File has been updated.
 #  Successfully updated.
@@ -1460,7 +1459,6 @@ objs/ft_dlstlast.o: srcs/ft_dlstlast.c /usr/include/stdc-predef.h libft.h /usr/l
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
@@ -1480,6 +1478,7 @@ objs/ft_dlstadd_front.d:
 # Not a target:
 objs/ft_putchar_fd.d:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-13 10:43:15.161021107
 #  File has been updated.
 #  Successfully updated.
@@ -1692,7 +1691,6 @@ compilation:
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
- 
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -1712,6 +1710,7 @@ compilation:
 # automatic
 # ? := 
 # variable set hash-table stats:
+ 
 # Load=8/32=25%, Rehash=0, Collisions=1/11=9%
 #  recipe to execute (from 'Makefile', line 149):
 	@echo "Compilation in progress..."
@@ -1814,12 +1813,12 @@ objs/ft_isdigit.d:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 256 / storage = 5757 B / avg = 22 B
-# current buf: size = 8162 B / used = 5757 B / count = 256 / avg = 22 B
+# strcache buffers: 1 (0) / strings = 257 / storage = 5764 B / avg = 22 B
+# current buf: size = 8162 B / used = 5764 B / count = 257 / avg = 22 B
 
-# strcache performance: lookups = 3418 / hit rate = 92%
+# strcache performance: lookups = 3419 / hit rate = 92%
 # hash-table stats:
-# Load=256/8192=3%, Rehash=0, Collisions=61/3418=2%
-# Finished Make data base on Thu Jun 16 16:36:42 2022
+# Load=257/8192=3%, Rehash=0, Collisions=61/3419=2%
+# Finished Make data base on Thu Jun 16 17:47:15 2022
 
  
