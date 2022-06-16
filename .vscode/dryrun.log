@@ -1,5 +1,131 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/mnt/nfs/homes/nburat-d/Documents/libft'
-make: Nothing to be done for 'all'.
+echo "Compilation in progress..."
+echo "Linking in progress..."
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_atoi.o srcs/ft_atoi.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_bzero.o srcs/ft_bzero.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_calloc.o srcs/ft_calloc.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_isalnum.o srcs/ft_isalnum.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_isalpha.o srcs/ft_isalpha.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_isascii.o srcs/ft_isascii.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_isdigit.o srcs/ft_isdigit.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_isprint.o srcs/ft_isprint.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_containchar.o srcs/ft_containchar.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_memchr.o srcs/ft_memchr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_memcmp.o srcs/ft_memcmp.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_memcpy.o srcs/ft_memcpy.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_memset.o srcs/ft_memset.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_memmove.o srcs/ft_memmove.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strchr.o srcs/ft_strchr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strdup.o srcs/ft_strdup.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strlcat.o srcs/ft_strlcat.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strlcpy.o srcs/ft_strlcpy.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strncpy.o srcs/ft_strncpy.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strlen.o srcs/ft_strlen.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_tablen.o srcs/ft_tablen.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strcmp.o srcs/ft_strcmp.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strncmp.o srcs/ft_strncmp.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strnstr.o srcs/ft_strnstr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strrchr.o srcs/ft_strrchr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_tolower.o srcs/ft_tolower.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_toupper.o srcs/ft_toupper.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_substr.o srcs/ft_substr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strjoin.o srcs/ft_strjoin.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strtrim.o srcs/ft_strtrim.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_split.o srcs/ft_split.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_itoa.o srcs/ft_itoa.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_striteri.o srcs/ft_striteri.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_strmapi.o srcs/ft_strmapi.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putchar_fd.o srcs/ft_putchar_fd.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putstr_fd.o srcs/ft_putstr_fd.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putendl_fd.o srcs/ft_putendl_fd.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putnbr_fd.o srcs/ft_putnbr_fd.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putchar.o srcs/ft_putchar.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putstr.o srcs/ft_putstr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_putnbr.o srcs/ft_putnbr.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstrev.o srcs/ft_lstrev.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstnew.o srcs/ft_lstnew.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstadd_front.o srcs/ft_lstadd_front.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstsize.o srcs/ft_lstsize.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstlast.o srcs/ft_lstlast.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstadd_back.o srcs/ft_lstadd_back.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstdelone.o srcs/ft_lstdelone.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstclear.o srcs/ft_lstclear.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstiter.o srcs/ft_lstiter.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_lstmap.o srcs/ft_lstmap.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_is_int.o srcs/ft_is_int.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstadd_back.o srcs/ft_dlstadd_back.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstadd_front.o srcs/ft_dlstadd_front.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstclear.o srcs/ft_dlstclear.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstlast.o srcs/ft_dlstlast.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstnew.o srcs/ft_dlstnew.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstsize.o srcs/ft_dlstsize.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstdelone.o srcs/ft_dlstdelone.c  -I ./
+mkdir -p objs/
+gcc -Wall -Wextra -Werror -MD -c -o objs/ft_dlstiter.o srcs/ft_dlstiter.c  -I ./
+ar rcs libft.a ./objs/ft_atoi.o ./objs/ft_bzero.o ./objs/ft_calloc.o ./objs/ft_isalnum.o ./objs/ft_isalpha.o ./objs/ft_isascii.o ./objs/ft_isdigit.o ./objs/ft_isprint.o ./objs/ft_containchar.o ./objs/ft_memchr.o ./objs/ft_memcmp.o ./objs/ft_memcpy.o ./objs/ft_memset.o ./objs/ft_memmove.o ./objs/ft_strchr.o ./objs/ft_strdup.o ./objs/ft_strlcat.o ./objs/ft_strlcpy.o ./objs/ft_strncpy.o ./objs/ft_strlen.o ./objs/ft_tablen.o ./objs/ft_strcmp.o ./objs/ft_strncmp.o ./objs/ft_strnstr.o ./objs/ft_strrchr.o ./objs/ft_tolower.o ./objs/ft_toupper.o ./objs/ft_substr.o ./objs/ft_strjoin.o ./objs/ft_strtrim.o ./objs/ft_split.o ./objs/ft_itoa.o ./objs/ft_striteri.o ./objs/ft_strmapi.o ./objs/ft_putchar_fd.o ./objs/ft_putstr_fd.o ./objs/ft_putendl_fd.o ./objs/ft_putnbr_fd.o ./objs/ft_putchar.o ./objs/ft_putstr.o ./objs/ft_putnbr.o ./objs/ft_lstrev.o ./objs/ft_lstnew.o ./objs/ft_lstadd_front.o ./objs/ft_lstsize.o ./objs/ft_lstlast.o ./objs/ft_lstadd_back.o ./objs/ft_lstdelone.o ./objs/ft_lstclear.o ./objs/ft_lstiter.o ./objs/ft_lstmap.o ./objs/ft_is_int.o ./objs/ft_dlstadd_back.o ./objs/ft_dlstadd_front.o ./objs/ft_dlstclear.o ./objs/ft_dlstlast.o ./objs/ft_dlstnew.o ./objs/ft_dlstsize.o ./objs/ft_dlstdelone.o ./objs/ft_dlstiter.o
+echo "done."
+echo "\033[0;32m"
+echo "Compilation complete !"
+echo "\033[m"
 make: Leaving directory '/mnt/nfs/homes/nburat-d/Documents/libft'
  
